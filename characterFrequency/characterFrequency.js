@@ -11,11 +11,10 @@ characterFrequency("") -->  [ ]
 var characterFrequency = function(str){
 var obj = {}
 for (var i = 0; i < str.length; i++) {
-	console.log(obj[str[i]])
 	if(obj[str[i]]) obj[str[i]]++
 	else obj[str[i]] = 1
 }
 return Object.entries(obj)
 }
 
-console.log(characterFrequency(""))
+console.log(characterFrequency("mississippi"))
