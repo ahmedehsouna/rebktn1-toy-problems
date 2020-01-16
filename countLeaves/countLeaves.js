@@ -94,9 +94,9 @@ var Tree = function(value) {
 
 
   var root = new Tree(); 
-root.countLeaves(); // 1 
+console.log(root.countLeaves()); // 1 
 root.addChild(new Tree()); 
-root.countLeaves(); // still 1 
+console.log(root.countLeaves()); // still 1 
 root.addChild(new Tree()); 
 root.children[0].addChild(new Tree()); 
 root.children[0].addChild(new Tree()); 
