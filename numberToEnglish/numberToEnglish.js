@@ -72,8 +72,8 @@ var numbersToWords = {
 
 
   console.log(numberToEnglish(7)) // "seven"
-  console.log(numberToEnglish(79)) // "seven"
-  console.log(numberToEnglish(90)) // "seven"
+  console.log(numberToEnglish(79)) // "seventy-nine"
+  console.log(numberToEnglish(90)) // "ninety"
 
   console.log(numberToEnglish(575)) // "five hundred seventy-five"
   console.log(numberToEnglish(78193512)) // "seventy-eight million one hundred ninety-three thousand five hundred twelve"
