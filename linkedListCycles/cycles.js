@@ -15,31 +15,27 @@ Constraint 3: Do not mutate the original nodes in any way
 */
 
 function Node(val) {
-    var obj = {};
-    obj.value = val || null;
-    obj.next = null;
-    return obj;
+  var obj = {};
+  obj.value = val || null;
+  obj.next = null;
+  return obj;
+}
+
+var hasCycle = function(linkedList) {
+  try {
+    JSON.stringify(linkedList);
+    return false;
+  } catch (err) {
+    return true;
   }
-  
-  var hasCycle = function(linkedList) {
-    // your code here...
-    if(linkedList == null) return false
-    try{
-        JSON.stringify(linkedList)
-        return hasCycle(linkedList.next)
-    }catch(err){
-        return true
-    }
-    
 };
 
-
-var linkedList = new Node(5)
-linkedList.next = new Node(6)
-console.log(hasCycle(linkedList))
-var a = linkedList.next
-a.next = linkedList
-console.log(hasCycle(linkedList))
+var linkedList = new Node(5);
+linkedList.next = new Node(6);
+console.log(hasCycle(linkedList));
+var a = linkedList.next;
+a.next = linkedList;
+console.log(hasCycle(linkedList));
 
 // if (linkedList == null) return false
 // if(tracker[JSON.stringify(linkedList)]) return true
