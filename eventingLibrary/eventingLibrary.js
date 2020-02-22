@@ -37,3 +37,10 @@ a = mixEvents(a)
 a.on('data' , (name)=> console.log('hi ' + name))
 a.on('data' , ()=> console.log('hey'))
 a.trigger('data', 'saad')
+
+var obj = mixEvents({ name: 'Alice', age: 30 });
+obj.on('ageChange', function(){ // On takes an event name and a callback function
+  console.log('Age changed');
+});
+obj.age++;
+obj.trigger('ageChange');
